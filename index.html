@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ectomobile Auxiliary Thrust Regulator</title>
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+
+  <div class="stage">
+    <div class="stack">
+
+      <div class="panel">
+
+        <div class="header">
+
+          <!-- Ghostbusters logo removed for vertical space -->
+
+          <div class="status-block">
+
+            <div class="led-grid" id="ledGrid"></div>
+
+            <div class="title">ECTOMOBILE AUXILIARY THRUST REGULATOR</div>
+            <div class="status" id="statusText">SYSTEM: SAFE</div>
+
+            <div class="substatus">
+              <span id="voltage">VOLTAGE: 12.3V</span>
+              <span id="mode">MODE: IDLE</span>
+              <span id="presetLabel">PRESET: NONE</span>
+            </div>
+
+            <!-- MODE TOGGLE (RACE / DEMO) -->
+            <div class="modebar">
+              <button id="demoModeBtn" class="mode-btn" type="button">MODE: RACE</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- VERTICAL METERS SIDE-BY-SIDE -->
+        <div class="meters">
+
+          <div class="meter vertical">
+            <label for="delaySlider">DELAY</label>
+
+            <div class="vu">
+              <div class="vu-track"></div>
+              <div class="vu-fill" id="delayFill"></div>
+              <input type="range" min="0" max="3000" value="250" id="delaySlider" />
+            </div>
+
+            <div class="value"><span id="delayValue">250</span> ms</div>
+          </div>
+
+          <div class="meter vertical">
+            <label for="outputSlider">OUTPUT</label>
+
+            <div class="vu">
+              <div class="vu-track"></div>
+              <div class="vu-fill" id="outputFill"></div>
+              <input type="range" min="0" max="100" value="85" id="outputSlider" />
+            </div>
+
+            <div class="value"><span id="outputValue">85</span>%</div>
+          </div>
+
+          <div class="meter vertical">
+            <label for="rampSlider">RAMP</label>
+
+            <div class="vu">
+              <div class="vu-track"></div>
+              <div class="vu-fill" id="rampFill"></div>
+              <input type="range" min="0" max="2000" value="300" id="rampSlider" />
+            </div>
+
+            <div class="value"><span id="rampValue">300</span> ms</div>
+          </div>
+
+          <div class="meter vertical">
+            <label for="killSlider">KILL</label>
+
+            <div class="vu">
+              <div class="vu-track"></div>
+              <div class="vu-fill" id="killFill"></div>
+              <input type="range" min="0" max="10" step="0.1" value="2.5" id="killSlider" />
+            </div>
+
+            <div class="value"><span id="killValue">2.5</span> s</div>
+          </div>
+
+        </div>
+
+        <div class="actions">
+          <button id="stopBtn" class="btn stop">STOP</button>
+          <button id="applyBtn" class="btn apply" disabled>APPLY</button>
+          <button id="saveBtn" class="btn save">SAVE</button>
+        </div>
+
+        <!-- DEMO STRIP (hidden unless in DEMO mode) -->
+        <div class="demo-strip" id="demoStrip" hidden>
+          <button id="lightsBtn" class="demo-toggle" type="button">LIGHTS: OFF</button>
+
+          <div class="demo-label">SIREN</div>
+          <div class="seg" id="sirenSeg" role="group" aria-label="Siren">
+            <button class="seg-btn active" data-siren="OFF" type="button">OFF</button>
+            <button class="seg-btn" data-siren="LOW" type="button">LOW</button>
+            <button class="seg-btn" data-siren="HIGH" type="button">HIGH</button>
+          </div>
+        </div>
+
+        <div class="presets">
+          <button class="preset" data-slot="A">PRESET A</button>
+          <button class="preset" data-slot="B">PRESET B</button>
+          <button class="preset" data-slot="C">PRESET C</button>
+        </div>
+
+        <div class="serial">
+          FIELD OUTPUT • REV 2026 • OFFLINE UI MOCK
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=3"></script>
+</body>
+</html>
