@@ -84,12 +84,11 @@ body{
 }
 
 .acme{
-  font-size: 34px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: #c03b23;
-  text-shadow: 0 1px 0 #f2d6ae, 0 2px 8px rgba(0,0,0,0.45);
-  margin-bottom: 4px;
+  font-family: Georgia, serif;
+  color: #c53020;
+  text-shadow:
+    1px 1px 0 #fff3d6,
+    2px 2px 0 rgba(0,0,0,0.35);
 }
 
 .title{
@@ -352,3 +351,4 @@ body[data-state="armed"] .led.active{
   outline: 2px solid rgba(224,182,42,0.75);
   box-shadow: 0 0 12px rgba(224,182,42,0.25);
 }
+
