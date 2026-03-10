@@ -84,7 +84,7 @@ body{
 }
 
 .acme{
-  font-size: 34px;
+  font-size: 68px;
   font-weight: 900;
   letter-spacing: 2px;
   color: #c03b23;
@@ -352,5 +352,6 @@ body[data-state="armed"] .led.active{
   outline: 2px solid rgba(224,182,42,0.75);
   box-shadow: 0 0 12px rgba(224,182,42,0.25);
 }
+
 
 
